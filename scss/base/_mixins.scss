@@ -1,0 +1,24 @@
+// mixins 
+
+// mixins for containers
+    @mixin container {
+        width: 80%;
+        margin: 0 auto;
+
+        h2 {
+            text-align: center;
+            // border-bottom: 2px solid orange;
+        }
+    }
+
+    @mixin grid {
+        display: grid;
+         grid-template-columns: repeat(3, 1fr);
+         grid-template-rows: repeat(2,1fr);
+    }
+
+    @mixin section($color) {
+        min-height: 100vh;
+        background-color: $color;
+
+    }
