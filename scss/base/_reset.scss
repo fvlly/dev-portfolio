@@ -3,7 +3,7 @@
 
 *,
 *::after,
-*::before{
+*::before {
     box-sizing: border-box;
 }
 
@@ -35,6 +35,7 @@ p {
 
 img {
     width: 100%;
+    display: block;
 }
 
 button {

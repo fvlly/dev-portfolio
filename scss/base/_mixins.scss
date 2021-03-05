@@ -11,10 +11,10 @@
         }
     }
 
-    @mixin grid {
+    @mixin grid($template-columns,$template-rows) {
         display: grid;
-         grid-template-columns: repeat(3, 1fr);
-         grid-template-rows: repeat(2,1fr);
+         grid-template-columns: $template-columns;
+         grid-template-rows: $template-rows;
     }
 
     @mixin section($color) {
@@ -22,3 +22,32 @@
         background-color: $color;
 
     }
+// moved button from components
+    @mixin button ($padding,$border, $border-radius, $bg-color,  $color){
+        padding: $padding;
+        border-radius:  $border-radius;
+         background-color:  $bg-color;
+         border:  $border;
+         color: $color;
+     }
+
+    @mixin rwd($breakpoint) {
+        @if $breakpoint == tablet {
+            @media  (min-width: 600px) {@content}
+                
+            }
+        @if $breakpoint == tablet2 {
+            @media  (min-width: 900px) {@content}
+                
+            }
+        @if $breakpoint == desktop {
+            @media  (min-width: 1200px) {@content}
+                
+            }
+        @if $breakpoint == bigscreens {
+            @media  (min-width: 1800px) {@content}
+                
+            }
+        }
+        
+    
