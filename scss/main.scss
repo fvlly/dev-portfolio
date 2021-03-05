@@ -88,6 +88,20 @@
                     color: base.$tertiary-color;
                 }
             }
+        @include base.rwd(tablet2) {
+            
+                display: flex;
+                flex-direction: row-reverse; 
+
+                .profile-image{
+                    width: 35%;
+                    margin: 2em auto;
+                }
+                .main-text {
+                    width: 55%;
+                  
+                }
+            }
             
         }
         .supplementary-text {
@@ -228,13 +242,76 @@
     }
 }
 
-.contact-me {
-    min-height: 100vh;
-    background: linear-gradient(65deg, base.$secondary-color, base.$bg-color1);
+.contact-section {
+    min-height: 50vh;
+    background: ( base.$secondary-color );
 
-    h2 {
-        color: base.$primary-color;
-    }       
+    
+    
+    .contact-container {
+        @include base.container;
+
+        .contact-message {
+            padding: 1em;
+            font-size: base.$medium-text;
+            color: base.$bg-color1;
+
+            @include base.rwd(tablet2) {
+                    
+                font-size: base.$large-text;
+            
+          
+        }  
+
+            
+            @include base.rwd(tablet2) {
+                    
+                font-size: base.$large-text;
+            
+          
+        }  
+        }
+
+
+        .email-container {
+            display: flex;
+         justify-content: center;
+
+            .contact-me {
+                text-align: center;
+                font-size: base.$large-text;
+                color: #276678;
+    
+                &:hover{
+                    transform: scale(1.1);
+                    color:darken(base.$primary-color,  20%)
+                }
+               
+            }
+        
+
+        }
+        
+
+     footer {
+         margin-top: 2em;
+         display: flex;
+         justify-content: center;
+         .icon-container {
+             padding: 0.5em;
+             
+             i {
+                color: base.$tertiary-color;
+                padding: 0.5em;
+
+                &:hover {
+                    color: #440a67;
+                }
+             }
+         }
+     }  
+    
+    }
 }
 
 .blog-post {
