@@ -1,88 +1,87 @@
 <%- include('partials/header'); -%>
-<section class="blog ">
-    <h2>The New-Bee Journal</h2>
-    <% posts.forEach(post => { %> 
+<section class="blog">
+  <h2>The New-Bee Journal</h2>
 
-        <div class="blog-container">
-            <div class="blog-card">
-                <div class="blog-image">
-                    <img src="" alt="">
-                </div>
-                <div class="blog-text">
-                    
-                        <h3 class="blog-title"><%= post.title %></h3>
-                    
-                    <p class="post-date"> Posted: </p>
-                    <p class="blog-content">
-                       <%= post.content %>
-                    </p>  
-    
-                </div>
-            </div>
-  <%  }); %>
-  
-    <div class="blog-container">
-        <div class="blog-card">
-            <div class="blog-image">
-                <img src="" alt="">
-            </div>
-            <div class="blog-text">
-                
-                    <h3 class="blog-title">Blog title</h3>
-                
-                <p class="post-date"> Posted: </p>
-                <p class="blog-content">
-                    Breaking out of the imposter syndrome , it
-                </p>  
+  <div class="blog-container">
+    <% posts.forEach(post => { %>
 
-            </div>
-        </div>
-        <div class="blog-card">
-            <div class="blog-image">
-                <img src="" alt="">
-            </div>
-            <div class="blog-text">
-                
-                    <h3 class="blog-title">Blog title</h3>
-                
-                <p class="post-date"> Posted: </p>
-                <p class="blog-content">
-                    Breaking out of the imposter syndrome , it
-                </p>  
+    <div class="blog-card">
+      <div class="blog-image">
+        <img src="" alt="" />
+      </div>
+      <div class="blog-text">
+        <h3 class="blog-title"><%= post.title %></h3>
 
-            </div>
-        </div>
-        <div class="blog-card">
-            <div class="blog-image">
-                <img src="" alt="">
-            </div>
-            <div class="blog-text">
-                
-                    <h3 class="blog-title">Blog title</h3>
-                
-                <p class="post-date"> Posted: </p>
-                <p class="blog-content">
-                    Breaking out of the imposter syndrome , it
-                </p>  
-
-            </div>
-        </div>
-        <div class="blog-card">
-            <div class="blog-image">
-                <img src="" alt="">
-            </div>
-            <div class="blog-text">
-                
-                    <h3 class="blog-title">Blog title</h3>
-                
-                <p class="post-date"> Posted: </p>
-                <p class="blog-content">
-                    Breaking out of the imposter syndrome , it
-                </p>  
-
-            </div>
-        </div>
+        <p class="post-date">Posted:<%= day %></p>
+        <p class="blog-content">
+          <%= (post.content).substring(0,100) + "..." %>
+          <a href="/posts/<%= post.title %>">Read More</a>
+        </p>
+      </div>
     </div>
+    <% }); %>
+  </div>
 
+  <!-- <div class="blog-container">
+        <div class="blog-card">
+            <div class="blog-image">
+                <img src="" alt="">
+            </div>
+            <div class="blog-text">
+                
+                    <h3 class="blog-title">Blog title</h3>
+                
+                <p class="post-date"> Posted: </p>
+                <p class="blog-content">
+                    Breaking out of the imposter syndrome , it
+                </p>  
 
+            </div>
+        </div>
+        <div class="blog-card">
+            <div class="blog-image">
+                <img src="" alt="">
+            </div>
+            <div class="blog-text">
+                
+                    <h3 class="blog-title">Blog title</h3>
+                
+                <p class="post-date"> Posted: </p>
+                <p class="blog-content">
+                    Breaking out of the imposter syndrome , it
+                </p>  
+
+            </div>
+        </div>
+        <div class="blog-card">
+            <div class="blog-image">
+                <img src="" alt="">
+            </div>
+            <div class="blog-text">
+                
+                    <h3 class="blog-title">Blog title</h3>
+                
+                <p class="post-date"> Posted: </p>
+                <p class="blog-content">
+                    Breaking out of the imposter syndrome , it
+                </p>  
+
+            </div>
+        </div>
+        <div class="blog-card">
+            <div class="blog-image">
+                <img src="" alt="">
+            </div>
+            <div class="blog-text">
+                
+                    <h3 class="blog-title">Blog title</h3>
+                
+                <p class="post-date"> Posted: </p>
+                <p class="blog-content">
+                    Breaking out of the imposter syndrome , it
+                </p>  
+
+            </div>
+        </div>
+    </div> -->
 </section>

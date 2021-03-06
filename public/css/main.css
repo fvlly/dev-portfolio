@@ -4,7 +4,10 @@
   box-sizing: border-box;
 }
 
-html, body, nav, ul {
+html,
+body,
+nav,
+ul {
   margin: 0;
   padding: 0;
 }
@@ -13,7 +16,12 @@ html {
   font-size: 1rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Fira Sans", sans-serif;
 }
 
@@ -34,6 +42,7 @@ img {
 
 button {
   outline: none;
+  font-size: 1rem;
 }
 
 a {
@@ -138,9 +147,37 @@ ul li a {
     width: 55%;
   }
 }
+@media (min-width: 1200px) {
+  .about-section .about-section-container .profile-container .profile-image {
+    width: 40%;
+  }
+  .about-section .about-section-container .profile-container .main-text {
+    width: 55%;
+    line-height: 1.6;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #276678;
+  }
+}
+.about-section .about-section-container .supplementary-text {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+}
+.about-section .about-section-container .supplementary-text h2 {
+  text-align: center;
+}
 .about-section .about-section-container .supplementary-text .sub-text {
-  padding: 1em 0;
-  margin-bottom: 0;
+  padding: 0.5em;
+  color: #f6f5f5;
+}
+@media (min-width: 1200px) {
+  .about-section .about-section-container .supplementary-text .sub-text {
+    font-size: 1;
+    position: absolute;
+    top: -100px;
+    left: 45%;
+  }
 }
 .about-section h2 {
   color: #276678;
@@ -193,11 +230,20 @@ ul li a {
   left: 40%;
 }
 .portfolio-section .portfolio-container .portfolio-card .project-detail .btn-project-summary {
+  font-size: 1rem;
   padding: 0.3em 0.3em;
-  border-radius: 1px solid #1687a7;
-  background-color: 5px;
-  border: #f6f5f5;
-  color: #eb5e0b;
+  border-radius: 5px;
+  background-color: #eb5e0b;
+  border: 1px solid #1687a7;
+  color: #d3e0ea;
+}
+.portfolio-section .portfolio-container .portfolio-card .project-detail .btn-project-summary:hover {
+  color: #f6f5f5;
+}
+@media (min-width: 600px) {
+  .portfolio-section .portfolio-container .portfolio-card .project-detail .btn-project-summary {
+    font-size: 1.5rem;
+  }
 }
 @media (min-width: 600px) {
   .portfolio-section .portfolio-container {
@@ -208,9 +254,21 @@ ul li a {
   .portfolio-section .portfolio-container .portfolio-card .project-detail {
     position: absolute;
     top: 40%;
-    left: 35%;
+    left: 30%;
   }
-  .portfolio-section .portfolio-container .portfolio-card .project-detail .btn-project-summary {
+}
+@media (min-width: 900px) {
+  .portfolio-section .portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+  }
+  .portfolio-section .portfolio-container .portfolio-card .project-detail .button-project-summary {
+    padding: 0.5em 0.5em;
+    border-radius: 5px;
+    background-color: #f6f5f5;
+    border: 1px solid #1687a7;
+    color: #eb5e0b;
     font-size: 1.5rem;
   }
 }
@@ -239,7 +297,9 @@ ul li a {
   font-weight: 600;
   color: #276678;
 }
-.blog .blog-container .blog-card .blog-text .blog-title p, .blog .blog-container .blog-card .blog-text .blog-title .post-date, .blog .blog-container .blog-card .blog-text .blog-title .post-content {
+.blog .blog-container .blog-card .blog-text .blog-title p,
+.blog .blog-container .blog-card .blog-text .blog-title .post-date,
+.blog .blog-container .blog-card .blog-text .blog-title .post-content {
   color: #d3e0ea;
 }
 @media (min-width: 600px) {
@@ -316,7 +376,8 @@ ul li a {
 .blog-post h2 {
   text-align: center;
 }
-.blog-post input, .blog-post textarea {
+.blog-post input,
+.blog-post textarea {
   outline: none;
   width: 100%;
 }
