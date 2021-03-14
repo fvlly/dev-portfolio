@@ -56,6 +56,79 @@ ul li a {
   text-decoration: none;
 }
 
+.main-nav {
+  position: relative;
+  background-color: #276678;
+  min-height: 7.5vh;
+}
+.main-nav .navbar-items .navbar-nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.main-nav .navbar-items .navbar-nav .navbar-item {
+  padding: 0.75em;
+  margin-right: 1em;
+}
+.main-nav .navbar-items .navbar-nav .navbar-item a {
+  color: #f6f5f5;
+}
+.main-nav .navbar-items .navbar-nav .navbar-item a:hover {
+  color: #eb5e0b;
+}
+.main-nav .toggle-menu {
+  position: absolute;
+  width: 40px;
+  top: 1.2em;
+  right: 0.5em;
+  display: none;
+}
+.main-nav .toggle-menu .bar {
+  width: 100%;
+  height: 5px;
+  border-radius: 5px;
+  background-color: #0e252b;
+  transition: all 300ms ease-in-out;
+}
+.main-nav .toggle-menu .bar::after, .main-nav .toggle-menu .bar::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 5px;
+  background-color: #0e252b;
+  border-radius: 5px;
+}
+.main-nav .toggle-menu .bar::before {
+  transform: translateY(-10px);
+}
+.main-nav .toggle-menu .bar::after {
+  transform: translateY(10px);
+}
+.main-nav .toggle-menu.active .bar {
+  transform: translateX(-50px);
+  background: transparent;
+}
+.main-nav .toggle-menu.active .bar::before {
+  transform: rotate(45deg) translate(25px, -25px);
+}
+.main-nav .toggle-menu.active .bar::after {
+  transform: rotate(-45deg) translate(25px, 25px);
+}
+@media (max-width: 400px) {
+  .main-nav .toggle-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .main-nav .navbar-items .navbar-nav {
+    display: none;
+  }
+  .main-nav .toggle-menu.active + .navbar-items .navbar-nav {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .hero-section {
   min-height: 100vh;
   display: flex;
@@ -181,23 +254,6 @@ ul li a {
 }
 .about-section h2 {
   color: #276678;
-}
-
-.navbar-items .navbar-nav {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  background-color: #276678;
-}
-.navbar-items .navbar-nav .navbar-item {
-  padding: 0.5em 0.75em;
-  margin-right: 2em;
-}
-.navbar-items .navbar-nav .navbar-item a {
-  color: #f6f5f5;
-}
-.navbar-items .navbar-nav .navbar-item a:hover {
-  color: #eb5e0b;
 }
 
 .portfolio-section {

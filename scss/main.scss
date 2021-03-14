@@ -133,28 +133,6 @@
   }
 }
 
-.navbar-items {
-  .navbar-nav {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    background-color: base.$tertiary-color;
-
-    .navbar-item {
-      padding: 0.5em 0.75em;
-      margin-right: 2em;
-
-      a {
-        color: base.$bg-color1;
-
-        &:hover {
-          color: base.$secondary-color;
-        }
-      }
-    }
-  }
-}
-
 // portfolio section
 
 .portfolio-section {

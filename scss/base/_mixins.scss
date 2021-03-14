@@ -31,6 +31,12 @@
 }
 
 @mixin rwd($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 400px) {
+      @content;
+    }
+  }
+
   @if $breakpoint == tablet {
     @media (min-width: 600px) {
       @content;
